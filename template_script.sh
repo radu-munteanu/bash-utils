@@ -26,7 +26,7 @@ readonly SCRIPT_HELP="$SCRIPT_ORIGINAL_NAME v.$SCRIPT_VERSION
         Prints the text given as parameter.
 
   Examples:
-    $SCRIPT_NAME test"
+    $SCRIPT_NAME print 'Hello world!'"
 
 PARAMS=( "$@" )
 PARAMS_NO=$#
