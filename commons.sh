@@ -7,7 +7,15 @@ readonly MSG_INFO='INFO:'
 readonly NOT_APPLICABLE="N/A"
 
 function printx() {
-  printf "$@" 2>&1 | tee -a "${LOG_FILE}"
+  # printf "$@" 2>&1 | tee -a "${LOG_FILE}"
+  
+	if printf "$@" | grep --color=never -E -q "${MSG_ERR}"; then
+		printf "$@" 1>&2
+	else
+		printf "$@" 2>&1
+	fi
+  
+  printf "$@" >> "${LOG_FILE}"
 }
 
 function is_integer() {
