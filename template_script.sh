@@ -43,7 +43,7 @@ function import() {
 
 	# Import begin
 
-  # Multiple import example:
+	# Multiple import example:
 	# source "${SCRIPT_DIR}/commons.sh" 2>&1 && source "${SCRIPT_DIR}/lib.sh" 2>&1
   
 	source "${SCRIPT_DIR}/commons.sh" 2>&1
